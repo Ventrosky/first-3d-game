@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour{
     public float moveSpeed;
@@ -26,6 +27,10 @@ public class Player : MonoBehaviour{
             isGrounded = false;
             rig.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
+
+        if(transform.position.y < -10){
+            GameOver();
+        }
     }
 
     private void OnCollisionEnter(Collision other) {
@@ -34,5 +39,9 @@ public class Player : MonoBehaviour{
         if (other.contacts[0].normal == Vector3.up){
             isGrounded = true;
         }
+    }
+
+    public void GameOver(){
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
