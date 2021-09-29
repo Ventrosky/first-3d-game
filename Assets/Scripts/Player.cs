@@ -5,6 +5,8 @@ using UnityEngine;
 public class Player : MonoBehaviour{
     public float moveSpeed;
     public Rigidbody rig;
+    public float jumpForce;
+    private bool isGrounded;
 
     // Update is called once per frame
     void Update(){
@@ -18,6 +20,19 @@ public class Player : MonoBehaviour{
 
         if (vel.x != 0 || vel.y != 0) {
             transform.forward = vel;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded){
+            isGrounded = false;
+            rig.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+        }
+    }
+
+    private void OnCollisionEnter(Collision other) {
+        // since using capsule collider there is only
+        // one contact point
+        if (other.contacts[0].normal == Vector3.up){
+            isGrounded = true;
         }
     }
 }
