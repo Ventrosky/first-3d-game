@@ -11,6 +11,8 @@ public class Player : MonoBehaviour{
 
     private bool isGrounded;
 
+    public UI ui;
+
     // Update is called once per frame
     void Update(){
         float x = Input.GetAxis("Horizontal") * moveSpeed;
@@ -49,5 +51,6 @@ public class Player : MonoBehaviour{
 
     public void AddScore(int amount){
         score += amount;
+        ui.SetScoreText(score);
     }
 }
