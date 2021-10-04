@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6234692867993773496}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.374}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4016881607820046532}
@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextSceneName: 
-  lastLevel: 0
+  lastLevel: 1
 --- !u!65 &7211526367840999913
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -85,15 +85,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c4f41bcfb7911ac45a9f54e0b147df73, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.141
+      value: -0.483
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c4f41bcfb7911ac45a9f54e0b147df73, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.244
+      value: -0.367
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c4f41bcfb7911ac45a9f54e0b147df73, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.983
+      value: -0.477
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c4f41bcfb7911ac45a9f54e0b147df73, type: 3}
       propertyPath: m_LocalRotation.w

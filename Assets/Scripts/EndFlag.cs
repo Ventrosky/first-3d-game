@@ -10,7 +10,7 @@ public class EndFlag : MonoBehaviour{
     private void OnTriggerEnter(Collider other) {
         if(other.CompareTag("Player")){
             if (lastLevel == true){
-                Debug.Log("You Win!");
+                SceneManager.LoadScene(0);
             } else {
                 SceneManager.LoadScene(nextSceneName);
             }
